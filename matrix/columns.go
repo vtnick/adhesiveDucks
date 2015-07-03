@@ -3,7 +3,7 @@ package matrix
 import "adhesiveDucks/vector"
 
 // Get column slice from matrix
-func (m *Matrix) GetCol(col int) (vals vector.Vector) {
+func (m Matrix) GetCol(col int) (vals vector.Vector) {
 
 	// Make vals slice
 	vals = vector.Zeros(m.Rows)
@@ -16,7 +16,7 @@ func (m *Matrix) GetCol(col int) (vals vector.Vector) {
 }
 
 // Get column slice from matrix, only certain rows
-func (m *Matrix) GetColByRow(col int, rows []int) (vals vector.Vector) {
+func (m Matrix) GetColByRow(col int, rows []int) (vals vector.Vector) {
 
 	// Make vals slice
 	vals = vector.Zeros(len(rows))

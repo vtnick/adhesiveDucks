@@ -37,7 +37,7 @@ func Ones(n int) (v Vector) {
 }
 
 // Magnitude of the vector
-func (v *Vector) Mag() (mag float64) {
+func (v Vector) Mag() (mag float64) {
 	sqv := 0.0
 	for _, val := range v.Data {
 		sqv += val * val
@@ -48,7 +48,7 @@ func (v *Vector) Mag() (mag float64) {
 }
 
 // Product of vector elements
-func (v *Vector) Prod() (p float64) {
+func (v Vector) Prod() (p float64) {
 	p = 1.0
 	for _, val := range v.Data {
 		p *= val
@@ -58,7 +58,7 @@ func (v *Vector) Prod() (p float64) {
 }
 
 // Unit vector
-func (v *Vector) UnitVec() (uv Vector) {
+func (v Vector) UnitVec() (uv Vector) {
 	mag := v.Mag()
 	uv = Ones(v.Len)
 
