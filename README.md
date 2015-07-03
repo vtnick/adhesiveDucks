@@ -9,3 +9,4 @@ Designed to be a simple matrix/vector library for Golang to build use with scien
 
 # License
 
+MIT license. Do what you want with these packages.
